@@ -1,0 +1,146 @@
+:root {
+  --wheat1: #fff4e7;
+  --wheat2: #f8f3ed;
+  --orange: #ec9f41;
+  --grey1: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+main {
+  background: linear-gradient(to bottom, var(--wheat1), var(--wheat2));
+  height: 600px;
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -300%);
+}
+
+.search-bar {
+  background: white;
+  width: 40vw;
+  min-width: 380px;
+  height: 55px;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-evenly;
+  filter: drop-shadow(0px 5px 10px #dbdbdb);
+}
+
+#search {
+  caret-color: var(--orange1);
+  padding: 18px;
+  flex: 1;
+  border-radius: 0.6rem;
+  z-index: 1;
+}
+
+::placeholder {
+  color: var(--orange);
+}
+
+#search:focus {
+  border: 2.5px solid var(--orange);
+}
+
+button {
+  border: 0px;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+
+#search-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: 12px;
+}
+
+button:hover {
+  background-color: var(--grey1);
+}
+
+.container {
+  position: relative;
+  top: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left-slider {
+  background-color: var(--orange);
+  height: 100px;
+  width: 100px;
+}
+
+.right-slider {
+  background-color: var(--orange);
+  height: 100px;
+  width: 100px;
+}
+
+.main-carousel,
+.flickity-enabled,
+.is-draggable {
+  height: 340px;
+  width: 200px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cards {
+  width: 200px;
+  height: 340px;
+  margin-right: 10px;
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.cards:before {
+  display: block;
+  color: white;
+}
+
+.flickity-prev-next-button {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 1rem;
+}
+
+.previous {
+  top: 40%;
+  left: 40vw;
+}
+
+.next {
+  top: 40%;
+  right: 40vw;
+}
+
+@media only screen and (min-width: 360px) {
+  .left-slider,
+  .right-slider {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .left-slider,
+  .right-slider {
+    display: block;
+  }
+}

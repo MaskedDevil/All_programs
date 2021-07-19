@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --grey: #5f5f5f;
+  --blue0: #0095ffa9;
+  --blue: #0094ff;
+  --blue1: #007bd3;
+  --shadow1: #c3c7d97a;
+  --shadow2: #eeeeee;
+  --shadow3: #d8d9da60;
+  --shadow4: rgb(156, 156, 156);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  position: fixed;
+  top: 0px;
+}
+
+.Logo,
+nav {
+  display: flex;
+}
+
+.Logo {
+  flex: 1;
+  padding: 10px;
+}
+
+#logoc {
+  display: none;
+}
+
+nav {
+  flex: 4;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.Browse button,
+#aboutUs {
+  margin: 0px 45px;
+  text-decoration: none;
+  color: var(--grey);
+  font-size: 16px;
+}
+
+#aboutUs {
+  margin-right: 70px;
+}
+
+.Browse span {
+  position: relative;
+  bottom: 2px;
+}
+
+.Browse li {
+  /* cursor: pointer; */
+  padding: 18px;
+}
+
+.Browse li:hover {
+  height: 100%;
+  width: 100%;
+  background-color: var(--shadow3);
+  border-radius: 1rem;
+}
+
+.Browse li a {
+  text-decoration: none;
+  color: black;
+}
+
+.Browse ul {
+  background: white;
+  border: 2px solid var(--shadow2);
+  font-size: 14px;
+  position: absolute;
+  list-style-type: none;
+  margin-left: 1.5em;
+  margin-top: 10px;
+  border-radius: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.Browse button:focus-within + ul {
+  opacity: initial;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+#Login,
+#Signup,
+#submit {
+  margin: 0px 15px 0px 0px;
+  width: 80px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+#Login {
+  margin-left: 15px;
+  color: var(--blue);
+  border: 2.5px solid var(--blue);
+}
+
+#Signup,
+#submit {
+  color: white;
+  background: var(--blue);
+}
+
+#Login:hover {
+  background: var(--shadow2);
+}
+
+#Signup:hover,
+#submit:hover {
+  background: var(--blue1);
+}
+
+#submit {
+  margin: 15px 0px 0px 0px;
+}
+
+.Login form {
+  background: white;
+  height: 150px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 1rem;
+  border: 2px solid var(--shadow2);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Login form input {
+  border-radius: 0.5rem;
+  border: 2px solid var(--shadow1);
+  padding-left: 6px;
+}
+
+.Login form input:focus {
+  outline: none;
+}
+
+.Login #Login:focus + form {
+  opacity: 100%;
+  visibility: visible;
+  pointer-events: all;
+}
+
+#signup-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  cursor: pointer;
+}
+
+#signup-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 30vw;
+  height: auto;
+  padding: 40px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  height: 50vh;
+  margin: 200px 20px 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Page */
+
+.search-container {
+  width: 40vw;
+  height: 50px;
+  border: 2.5px solid var(--shadow1);
+  box-shadow: 0px 5px 15px 1.5px rgba(187, 187, 187, 0.25);
+  border-radius: 9px;
+  display: flex;
+  overflow: hidden;
+  z-index: -2;
+}
+
+#search {
+  width: 1em;
+  height: 100%;
+  flex: 1;
+  border: none;
+  padding-left: 15px;
+  font-size: 15.5px;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#search::-webkit-search-cancel-button {
+  margin: 10px 10px 10px 8px;
+}
+
+::placeholder {
+  color: var(--blue0);
+}
+
+.searchIcon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: -1;
+}
+
+#sico {
+  position: absolute;
+  top: 26%;
+  left: 30%;
+}
+
+.searchIcon:hover {
+  background: var(--shadow2);
+}
+
+#book-lover {
+  height: auto;
+  width: 40vw;
+  padding-left: 100px;
+}
+
+/* Genres */
+
+.GenreContainer {
+  width: 96%;
+  height: 60vh;
+  position: absolute;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: -1;
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--grey);
+}
+
+h2 {
+  font-size: 18px;
+  color: var(--shadow4);
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.CardBox {
+  flex: 8;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  font-size: 18px;
+  height: 200px;
+  width: 200px;
+  margin: 0px 0px 18px 18px;
+  border-radius: 1rem;
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CardBox button:hover {
+  background: var(--shadow3);
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 21vh;
+}
+
+footer p {
+  background-color: rosybrown;
+  padding: 10px;
+}
+
+/* Large Screen */
+@media screen and (min-width: 600px) {
+}
+
+/* Small Screen */
+@media screen and (max-width: 760px) {
+  #logof {
+    display: none;
+  }
+
+  #logoc {
+    display: block;
+  }
+
+  .Browse button,
+  #aboutUs {
+    margin: 0px 10px;
+  }
+
+  .Browse ul {
+    margin-left: -0.5rem;
+  }
+
+  .GenreContainer {
+    height: 60vh;
+  }
+
+  .box {
+    font-size: 15px;
+    height: 100px;
+    width: 100px;
+    margin-left: 14px;
+  }
+
+  .search-container {
+    width: 60vw;
+  }
+
+  #book-lover {
+    display: none;
+  }
+}

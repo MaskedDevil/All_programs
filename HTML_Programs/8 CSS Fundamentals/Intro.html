@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Different Ways to provide CSS</title>
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!--These rules override the rules defined in external stylesheet-->
+    <style>
+      .green_paragraph {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Providing CSS:
+    1.Embedded Stylesheets
+    2.External Stylesheets
+    3.Inline Styles-->
+    <p class="green_paragraph">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, odit?
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, a.</p>
+    <!--Inline Style example and this also overrides the external style-->
+    <p style="color: indigo; font-weight: bold">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      suscipit doloribus placeat.
+    </p>
+  </body>
+</html>

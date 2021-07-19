@@ -1,0 +1,29 @@
+html,
+body,
+div {
+  margin-top: 80px;
+  padding: 0;
+}
+.abc {
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+}
+.abc::-webkit-scrollbar {
+  height: 10px;
+  background-color: rgb(6, 0, 88);
+}
+.abc::-webkit-scrollbar-thumb {
+  width: 1px;
+  background: rgb(155, 137, 235);
+}
+#viewContainer {
+  height: 200px;
+  width: 2000px;
+  display: table;
+}
+.page {
+  height: 100%;
+  display: table-cell;
+  border: 1px solid rgb(0, 81, 255);
+}

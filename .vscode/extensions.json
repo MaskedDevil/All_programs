@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "ritwickdey.liveserver",
+        "grapecity.gc-excelviewer",
+        "ms-vsliveshare.vsliveshare",
+        "ms-vscode.live-server",
+        "ms-vscode-remote.remote-ssh",
+        "hediet.vscode-drawio"
+    ]
+}
